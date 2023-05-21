@@ -104,7 +104,7 @@ export const getSimilarPosts = async (categories, slug) => {
       }
     }
   `;
-  const result = await request(graphqlAPI, query, { categories, slug });
+  const result = await request(graphqlAPI, query, { slug, categories });
 
   return result.posts;
 };
