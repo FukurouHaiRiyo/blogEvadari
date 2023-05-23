@@ -1,6 +1,8 @@
 import { PostCard, Categories, PostWidget } from '../components';
 import { getPosts } from '../services';
 import {FeaturedPosts} from '../sections';
+import CookieConsent from "react-cookie-consent";
+
 
 export default function Home({ posts }) {
   return (
@@ -19,6 +21,10 @@ export default function Home({ posts }) {
           </div>
         </div>
       </div>
+      <CookieConsent location="bottom" cookieName="myAwesomeCookieName3" expires={7} overlay>
+        This website collects user data for a better user experience.
+        By clicking "I understand", you agree with these actions.
+      </CookieConsent>
     </div>
   );
 }
